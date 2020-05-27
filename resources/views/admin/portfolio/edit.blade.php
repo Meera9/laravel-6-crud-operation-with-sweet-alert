@@ -38,14 +38,15 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="title">{{$title}}<span class="text-danger">*</span></label>
-                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Enter {{$title}} Description" rows="5">{{$data_edit->description }}</textarea>
+                        <textarea type="text" class="form-control" id="description" name="description" placeholder="Enter {{$title}} Description"
+                        rows="5">{{$data_edit->description }}</textarea>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="title">{{$title}}<span class="text-danger">*</span></label>
                         @if(!empty($data_edit->image))
-                            <img src="{{asset('uploads/portfolio')}}/{{$data_edit->image}}" class="img-responsive" width="100"/>
+                            <img src="{{asset('public/uploads/portfolio')}}/{{$data_edit->image}}" class="img-responsive" width="100"/>
                             <br/>   <input type="file" name="image">
                         @else
                             <input type="file" name="image">
@@ -58,7 +59,8 @@
         <!-- /.box-body -->
         <div class="box-footer">
             <button type="submit" name="submit" value="submit" class="btn btn-sm btn-primary"><i class="fa fa-save"></i> Submit</button>
-            <a href="{{ route($route.'index') }}"><button type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-circle-left"></i> Cancel</button></a>
+            <a href="{{ route($route.'index') }}"><button type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-circle-left"></i>
+              Cancel</button></a>
         </div>
     </div>
 </form>

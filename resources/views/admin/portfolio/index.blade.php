@@ -12,7 +12,7 @@
 @section('content')
 <div class="row">
     <div class="col-xs-12">
-        
+
         <div class="box">
         <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -35,12 +35,12 @@
                         <th>Description
                         <th width="280px">Action</th>
                       </tr>
-                    </tfoot> 
-                    
+                    </tfoot>
+
                 </table>
-              </div>            
+              </div>
             <!-- /.box-header -->
-          
+
             <!-- /.box-body -->
 
         </div>
@@ -59,13 +59,13 @@ $(function() {
       serverSide: true,
       responsive: true,
       ajax: "{!! route($route."ajaxData")   !!}",
-      
+
       columns: [
           {data: 'id', name: 'id' },
           {data: 'name', name: 'name' },
           { data: 'image', name: 'image',
             render: function( data, type, full, meta ) {
-              return "<img src=\"{{url(asset('uploads/portfolio'))}}/" + data + "\" height=\"50\"/>";
+              return "<img src=\"{{url(asset('public/uploads/portfolio'))}}/" + data + "\" height=\"50\"/>";
             }
           },
           {data: 'description', name: 'description' },
